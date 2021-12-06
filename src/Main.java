@@ -1,5 +1,6 @@
 import java.util.Scanner;	 
 import javax.swing.JOptionPane;
+import java.util.ArrayList;
 import java.util.Random;
 
 
@@ -283,6 +284,150 @@ public class Main {
 		  //String result = name.replace('o', 'a');
 		   
 		  //System.out.println(result);
+		
+		
+		// wrapper class =  provides a way to use primitive data types as reference data types
+		  //     reference data types contain useful methods
+		  //     can be used with collections (ex.ArrayList)
+		  
+		  //primitive  //wrapper
+		  //---------  //-------
+		  // boolean  Boolean
+		  // char   Character
+		  // int   Integer
+		  // double  Double
+		  
+		  // autoboxing = the automatic conversion that the Java compiler makes between the primitive types and their corresponding object wrapper classes
+		  // unboxing = the reverse of autoboxing. Automatic conversion of wrapper class to primitive
+		  
+//		  Boolean a = true;
+//		  Character b = '@';
+//		  Integer c = 123;
+//		  Double d = 3.14;
+		
+		
+		// Array List
+		
+//		ArrayList<String> food = new ArrayList<String>();		
+//		food.add("pizza");
+//		food.add("hamburger");
+//		food.add("pasta");
+//		
+//		ArrayList<String> water = new ArrayList<String>();
+//		water.add("pizza");
+//		water.add("hamburger");
+//		water.add("pasta");
+//		
+//		
+//		ArrayList<ArrayList<String>> List = new ArrayList();
+//		
+//		List.add(food);
+//		List.add(water);
+//		
+//		
+//		
+//		System.out.println(List.get(0).get(1));
+		
+		
+		//For-Each Loop
+		
+//		ArrayList<String> animals = new ArrayList<String>();
+//		
+//		animals.add("Cat");
+//		animals.add("Dog");
+//		animals.add("Rat");
+//		animals.add("Bird");
+//		
+//		for(String i : animals) {
+//			System.out.println(i);
+//		}
+		
+		
+		// printf() = 	an optional method to control, format, and display text to the console window
+		//				two arguments = format string + (object/variable/value)
+		//				% [flags] [precision] [width] [conversion-character]
+				
+//		boolean myBoolean = true;
+//		char myChar = '@';
+//		String myString = "Bro";
+//		int myInt = 50;
+//		double myDouble = 1000;
+			
+		// [conversion-character]
+		//System.out.printf("%b",myBoolean);
+		//System.out.printf("%c",myChar);
+		//System.out.printf("%s",myString);
+		//System.out.printf("%d",myInt);
+		//System.out.printf("%f",myDouble);
+		
+		//[width]
+		// minimum number of characters to be written as output
+		//System.out.printf("Hello %10s",myString);
+		
+		//[precision]
+		// sets number of digits of precision when outputting floating-point values
+		//System.out.printf("You have this much money %.1f",myDouble);
+		
+		// [flags]
+		// adds an effect to output based on the flag added to format specifier
+		// - : left-justify
+		// + : output a plus ( + ) or minus ( - ) sign for a numeric value
+		// 0 : numeric values are zero-padded
+		// , : comma grouping separator if numbers > 1000
+		
+		//System.out.printf("You have this much money %,f",myDouble);
+
+		
+		//Final keyword
+		
+//		final double pi = 3.14;
+//		
+//		System.out.println(pi);
+		
+		//OOP + Constructers
+		
+		OOP human = new OOP("Rock",60,80);
+		OOP human1 = new OOP("Martin",70,88);
+		
+		OOP[] body = {human, human1};
+		
+		//System.out.println(human1.age);
+		
+		//human.eat();
+		//human1.drink();
+		
+		// toString Method
+		
+		
+		//System.out.println(body[1].name);
+		
+		Garage garage = new Garage();
+		car mach = new car("toyota");
+		
+		//Garage.park(mach); // using the static
+		//human1.park(mach); // non static
+		
+		
+		// static creates a single copy of anything and allows for sharing
+		
+		/* when you type extends while defining the class, the name of class you type 
+		 * after it is the father in which this class will inherit the code from 
+		 * 
+		 * When overriding it's best practice to put
+		 * @override 
+		 * before it
+		 */
+		
+		
+		Hero hero = new Hero("Batman",44,"$$$");
+		
+		// super sends the info back to the parent
+		
+		
+		System.out.println(hero.toString());
+		
+		
 }
 
+	
 }
