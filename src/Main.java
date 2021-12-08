@@ -10,10 +10,10 @@ public class Main {
 		
 		
 		
-//		System.out.println("First Sentence");
-//		System.out.println("Some Other Line\n");
-//		System.out.println("Hello\n");
-//		
+		// System.out.println("First Sentence");
+		// System.out.println("Some Other Line\n");
+		// System.out.println("Hello\n");
+		
 //		
 //		// This a comment
 //		
@@ -425,6 +425,26 @@ public class Main {
 		
 		
 		System.out.println(hero.toString());
+		
+		
+		// abstract =  	abstract classes cannot be instantiated, but they can have a subclass
+				//				abstract methods are declared without an implementation
+								//it forces the subclass to override the method 
+		
+		
+		/*
+		 * Access Modifiers
+		 * 
+		 * default(not writing anything): 
+		 * Classes only in the same package can access the content of the class
+		 * 
+		 * Public: Makes it visible and accessible for every class
+		 * 
+		 * protected: only its sub classes can access its contents
+		 * 
+		 * private: everything in the same class are only able to access the content
+		 *  
+		 */
 		
 		
 }
