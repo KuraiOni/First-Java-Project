@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
-public class Main2 {
+public class METHOD {
 
 	public static void main(String[] arges) {
 	
