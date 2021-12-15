@@ -15,11 +15,14 @@ public class Main {
 
             int Z = X / Y;
             System.out.println("the result: " + Z);
-        } catch (ArithmeticException e) {
+        } 
+        catch (ArithmeticException e) {
             System.out.println("You can't divide by zero IDIOT!!!!!");
-        } catch (InputMismatchException e) {
+        } 
+        catch (InputMismatchException e) {
             System.out.println("You cant divide by this OMG!!!");
-        } finally {
+        } 
+        finally {
             scanner.close();
         }
     }
