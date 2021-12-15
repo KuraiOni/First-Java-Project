@@ -1,16 +1,15 @@
 package Frame;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.LayoutManager;
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 import javax.swing.border.Border;
 
-public class MyFrame extends JFrame {
+public class MyFrame extends JFrame implements ActionListener {
+
+    JButton button;
+    JPanel yellowPanel;
+
     MyFrame() {
 
         ImageIcon icon = new ImageIcon("2521671.jpg");// Create an image icon
@@ -19,13 +18,32 @@ public class MyFrame extends JFrame {
 
         JPanel bluePanel = new JPanel();
         bluePanel.setBackground(Color.BLUE);
-        bluePanel.setBounds(0, 0, 500, 500);
+        bluePanel.setPreferredSize(new Dimension(100, 100));
         bluePanel.setLayout(null);
 
-        JPanel yellowPanel = new JPanel();
+        yellowPanel = new JPanel();
         yellowPanel.setBackground(Color.YELLOW);
-        yellowPanel.setBounds(500, 500, 500, 500);
+        yellowPanel.setPreferredSize(new Dimension(100, 100));
         yellowPanel.setLayout(null);
+        yellowPanel.setVisible(false);
+
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setBackground(Color.MAGENTA);
+        buttonPanel.setPreferredSize(new Dimension(100, 100));
+
+        button = new JButton();
+        button.addActionListener(this);
+        button.setPreferredSize(new Dimension(100, 100));
+        button.setBackground(Color.lightGray);
+        button.setText("Click here");
+        // button.setIcon(icon1);
+        button.setHorizontalTextPosition(JButton.CENTER);
+        button.setVerticalTextPosition(JButton.BOTTOM);
+        button.setIconTextGap(-15);
+        button.setBorder(BorderFactory.createEtchedBorder());
+        button.setFont(new Font("Italic", Font.BOLD, 25));
+        button.setForeground(Color.ORANGE);
+        button.setFocusable(false);
 
         JLabel label = new JLabel();
         label.setText("The Grind Never Stops");// sets a text
@@ -56,16 +74,27 @@ public class MyFrame extends JFrame {
         this.setVisible(true);// sets the visibility
         this.setSize(1000, 1000);// sets the x dimensions anf the y dimensions
         // this.setResizable(false);// GUI can't be resized
-        this.setLayout(null);
-        this.add(yellowPanel);
+        this.setLayout(new BorderLayout());
+        this.add(yellowPanel, BorderLayout.NORTH);
         // this.pack();
-        this.add(bluePanel);
+        this.add(bluePanel, BorderLayout.SOUTH);
+        this.add(buttonPanel, BorderLayout.WEST);
         bluePanel.add(label);
         yellowPanel.add(label2);
+        buttonPanel.add(button);
+        // this.add(button);
 
         this.setIconImage(icon.getImage());// changes the icon for GUI
         this.getContentPane().setBackground(new Color(123, 50, 250)); // rgb colors
         // frame.getContentPane().setBackground(Color.CYAN); //normal way to set a color
         // frame.getContentPane().setBackground(new Color(0x000000)); // hex code
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == button) {
+            yellowPanel.setVisible(true);
+        }
+
     }
 }
