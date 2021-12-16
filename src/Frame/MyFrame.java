@@ -16,6 +16,16 @@ public class MyFrame extends JFrame implements ActionListener {
         ImageIcon icon1 = new ImageIcon("download (1).png");// Create an image icon
         Border border = BorderFactory.createLineBorder(Color.green, 3);// create a border
 
+        // ---------------------JLayeredPanel---------------------------------
+
+        // JLayeredPane layeredPane = new JLayeredPane();
+        // layeredPane.setBounds(0, 0, 500, 500);
+        /*
+         * then you add labels to the layerdPane
+         * and to set the z-index:
+         * layeredPane.add(label, Integer,valueof(and the order here))
+         */
+
         JPanel bluePanel = new JPanel();
         bluePanel.setBackground(Color.BLUE);
         bluePanel.setPreferredSize(new Dimension(100, 100));
@@ -74,7 +84,8 @@ public class MyFrame extends JFrame implements ActionListener {
         this.setVisible(true);// sets the visibility
         this.setSize(1000, 1000);// sets the x dimensions anf the y dimensions
         // this.setResizable(false);// GUI can't be resized
-        this.setLayout(new BorderLayout());
+        this.setLayout(new BorderLayout());// -FlowLayout(new FlowLayout(FlowLayout.CENTER,10,10))
+        // -GridLayout(new GridLayout(rows,columns,horizontal spacing,vertical spacing))
         this.add(yellowPanel, BorderLayout.NORTH);
         // this.pack();
         this.add(bluePanel, BorderLayout.SOUTH);
