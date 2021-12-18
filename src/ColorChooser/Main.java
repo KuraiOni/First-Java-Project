@@ -1,4 +1,4 @@
-package MenuBar;
+package ColorChooser;
 
 public class Main {
     public static void main(String[] arges) {
