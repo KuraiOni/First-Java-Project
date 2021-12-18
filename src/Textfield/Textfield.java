@@ -30,18 +30,18 @@ public class Textfield extends JFrame implements ActionListener {
         textField.setCaretColor(Color.white);
         textField.setText("username");
 
-        this.add(button);
         this.add(textField);
+        this.add(button);
         this.pack();
         this.setVisible(true);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource()==button) {
-			System.out.println("Welcome "+ textField.getText());
-			//button.setEnabled(false);
-			//textField.setEditable(false);
+        if (e.getSource() == button) {
+            System.out.println("Welcome " + textField.getText());
+            // button.setEnabled(false);
+            // textField.setEditable(false);
+        }
     }
-
 }
